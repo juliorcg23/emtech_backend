@@ -3,10 +3,9 @@ FROM node:18
 WORKDIR /app
 
 COPY package*.json ./
+COPY . .
 
 RUN npm install
-
-COPY . .
 
 RUN npm install -g @nestjs/cli
 RUN npm run build
